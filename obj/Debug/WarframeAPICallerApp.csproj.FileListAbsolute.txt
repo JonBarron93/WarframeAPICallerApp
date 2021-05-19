@@ -1,0 +1,10 @@
+C:\Users\jonba_000\source\repos\WarframeAPICallerApp\bin\Debug\WarframeAPICallerApp.exe.config
+C:\Users\jonba_000\source\repos\WarframeAPICallerApp\bin\Debug\WarframeAPICallerApp.exe
+C:\Users\jonba_000\source\repos\WarframeAPICallerApp\bin\Debug\WarframeAPICallerApp.pdb
+C:\Users\jonba_000\source\repos\WarframeAPICallerApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jonba_000\source\repos\WarframeAPICallerApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jonba_000\source\repos\WarframeAPICallerApp\obj\Debug\WarframeAPICallerApp.csprojAssemblyReference.cache
+C:\Users\jonba_000\source\repos\WarframeAPICallerApp\obj\Debug\WarframeAPICallerApp.csproj.CoreCompileInputs.cache
+C:\Users\jonba_000\source\repos\WarframeAPICallerApp\obj\Debug\WarframeAPICallerApp.csproj.CopyComplete
+C:\Users\jonba_000\source\repos\WarframeAPICallerApp\obj\Debug\WarframeAPICallerApp.exe
+C:\Users\jonba_000\source\repos\WarframeAPICallerApp\obj\Debug\WarframeAPICallerApp.pdb
