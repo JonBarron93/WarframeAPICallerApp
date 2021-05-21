@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace WarframeAPICallerApp
@@ -36,13 +37,13 @@ namespace WarframeAPICallerApp
         {
             var client = new HttpClient();
             string worldURL = $"https://api.warframestat.us/";
-            var wholeWorld = client.GetStringAsync(worldURL + $"{system}/fissures").Result.ToString();
-            return wholeWorld; // CHANGE TO ARRAY OF OBJECTS
+            var wholeWorld = client.GetStringAsync(worldURL + $"{system}/fissures").Result;
+            return wholeWorld; 
         }
-        public List<FissureMisson> CreateFissureMissionList(object j)
+        public FissureMissionList CreateFissureMissionList(string wholeWorld)
         {
-            var nissionList = new List<FissureMisson>();
-
+            var itemizedWorld = $"{{\"crackers\":{wholeWorld}}}";
+            var missionList = JsonConvert.DeserializeObject<FissureMissionList>(itemizedWorld);
             return missionList;
         }
 
@@ -52,6 +53,21 @@ namespace WarframeAPICallerApp
             string worldURL = $"https://api.warframestat.us/";
             var wholeWorld = client.GetStringAsync(worldURL + $"{system}/sortie").Result.ToString();
             return wholeWorld;
+        }
+        public string GetMissionPlanet(FissureMisson a)
+        {
+            var node = a.node;
+            int start = node.IndexOf("(") + 1;
+            int end = node.IndexOf(")", start);
+            var planet = node.Substring(start, end - start);
+            return planet;
+        }
+        public string GetMissionNodeName(FissureMisson a)
+        {
+            var node = a.node;
+            var end = node.IndexOf("(");
+            var nodeName = node.Substring(0, end);
+            return nodeName;
         }
     }
 }

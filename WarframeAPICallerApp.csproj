@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FissureMissionList.cs" />
     <Compile Include="IUserSettings.cs" />
     <Compile Include="IWarframeAPICaller.cs" />
     <Compile Include="FissureMisson.cs" />
